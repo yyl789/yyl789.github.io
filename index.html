@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yongyu Lin — Aspiring AI & Data Analyst Portfolio">
+    <title>Yongyu Lin | AI & Data Analyst</title>
+    <!-- Tailwind CSS CDN for beautiful modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for elegant icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --primary: #00f5d4;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #00f5d4;
+            bottom: -8px;
+            left: 0;
+        }
+        
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 245 212 / 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00f5d4;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .tag {
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            transform: scale(1.1) rotate(2deg);
+            background-color: #00f5d4;
+            color: #0f172a;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-lg">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-400 flex items-center justify-center text-slate-950 font-bold text-xl">YL</div>
+                <h1 class="heading-font text-2xl tracking-tighter">Yongyu Lin</h1>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link text-slate-300 hover:text-white">Home</a>
+                <a href="#about" class="nav-link text-slate-300 hover:text-white">About</a>
+                <a href="#skills" class="nav-link text-slate-300 hover:text-white">Skills</a>
+                <a href="#projects" class="nav-link text-slate-300 hover:text-white">Projects</a>
+                <a href="#resume" class="nav-link text-slate-300 hover:text-white">Resume</a>
+                <a href="#contact" class="nav-link text-slate-300 hover:text-white">Contact</a>
+            </div>
+            
+            <a href="https://github.com" target="_blank" 
+               class="flex items-center gap-2 px-5 py-2.5 bg-white text-slate-950 rounded-3xl font-semibold hover:bg-cyan-400 hover:text-slate-950">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-6 py-2 rounded-3xl border border-cyan-400/30 text-cyan-400 text-sm font-medium">
+                    <i class="fa-solid fa-rocket"></i>
+                    Open to 2026 AI &amp; Data Analyst roles
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl leading-none font-semibold heading-font tracking-tighter">
+                    Transforming data into<br>
+                    <span class="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">business intelligence</span>
+                </h1>
+                
+                <p class="text-2xl text-slate-400 max-w-md">
+                    Aspiring AI &amp; Data Analyst passionate about generative AI, machine learning, and data-driven strategy.
+                </p>
+                
+                <!-- Key Tags -->
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag px-6 py-3 text-sm font-medium bg-slate-800/70 border border-slate-700 rounded-3xl flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line"></i> Data Analytics
+                    </span>
+                    <span class="tag px-6 py-3 text-sm font-medium bg-slate-800/70 border border-slate-700 rounded-3xl flex items-center gap-2">
+                        <i class="fa-solid fa-brain"></i> Generative AI
+                    </span>
+                    <span class="tag px-6 py-3 text-sm font-medium bg-slate-800/70 border border-slate-700 rounded-3xl flex items-center gap-2">
+                        <i class="fa-solid fa-database"></i> Business Analytics
+                    </span>
+                    <span class="tag px-6 py-3 text-sm font-medium bg-slate-800/70 border border-slate-700 rounded-3xl flex items-center gap-2">
+                        <i class="fa-solid fa-python"></i> Python &amp; SQL
+                    </span>
+                    <span class="tag px-6 py-3 text-sm font-medium bg-slate-800/70 border border-slate-700 rounded-3xl flex items-center gap-2">
+                        <i class="fa-solid fa-table"></i> Tableau
+                    </span>
+                </div>
+                
+                <div class="flex items-center gap-4 pt-4">
+                    <a href="#projects" 
+                       class="px-8 py-4 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-semibold rounded-3xl flex items-center gap-3 hover:shadow-2xl hover:shadow-cyan-500/30">
+                        View My Projects
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" 
+                       class="px-8 py-4 border border-slate-400 text-slate-300 font-medium rounded-3xl hover:bg-white/10">
+                        Get in touch
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-8 text-sm text-slate-400 pt-6">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Lingnan University • MSc AI &amp; Business Analytics
+                    </div>
+                    <div class="h-3 w-px bg-slate-700"></div>
+                    <div>Expected Jun 2026</div>
+                </div>
+            </div>
+            
+            <!-- Artistic Hero Visual -->
+            <div class="hidden md:flex justify-center relative">
+                <div class="relative">
+                    <div class="absolute -inset-10 bg-gradient-to-br from-cyan-400/20 to-teal-400/20 rounded-[4rem] blur-3xl"></div>
+                    <div class="w-96 h-96 rounded-3xl bg-slate-900 border border-cyan-400/30 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <div class="text-[180px] font-black heading-font text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 via-teal-400 to-cyan-400 leading-none opacity-10">YL</div>
+                            <div class="mt-[-80px] text-4xl font-light text-cyan-300 tracking-[6px]">AI • DATA • INSIGHT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-2 text-cyan-400 text-xs tracking-widest">
+            <div class="animate-bounce">↓</div>
+            SCROLL TO EXPLORE
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="py-28 bg-slate-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="section-header text-5xl font-semibold heading-font mb-16">About Me</h2>
+            
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-8 text-lg leading-relaxed text-slate-300">
+                    <p>
+                        I am Yongyu Lin, a proactive Master’s student in Artificial Intelligence and Business Analytics at Lingnan University (expected graduation: June 2026). 
+                    </p>
+                    <p>
+                        Combining my Bachelor’s in E-commerce (GPA 3.7/5.0, Top 19%) with hands-on experience in data analytics and generative AI, I specialize in turning complex data into actionable business insights.
+                    </p>
+                    <p>
+                        My internships at PwC and Amazon operations, along with recent AI-driven projects, have equipped me with strong technical and business acumen. 
+                        I am passionate about using AI and analytics to solve real-world problems and create measurable value.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 pt-8">
+                        <div>
+                            <div class="uppercase text-xs tracking-widest text-cyan-400 mb-2">Education</div>
+                            <ul class="space-y-4">
+                                <li class="flex gap-4">
+                                    <div class="text-cyan-400 font-mono">2025–2026</div>
+                                    <div>
+                                        <strong>M.Sc. Artificial Intelligence and Business Analytics</strong><br>
+                                        Lingnan University • GPA 3.8/4.0
+                                    </div>
+                                </li>
+                                <li class="flex gap-4">
+                                    <div class="text-cyan-400 font-mono">2021–2025</div>
+                                    <div>
+                                        <strong>B.Mgt. E-commerce</strong><br>
+                                        Guangdong University of Technology • GPA 3.7/5.0 (Top 19%)
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <div class="uppercase text-xs tracking-widest text-cyan-400 mb-2">Strengths</div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> Data-driven problem solving with advanced analytics</li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> Generative AI applications in digital marketing</li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> Business storytelling &amp; cross-functional collaboration</li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cyan-400 mt-1"></i> Proactive project management in fast-paced environments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5">
+                    <div class="glass rounded-3xl p-8 border border-slate-700">
+                        <p class="italic text-slate-400 text-lg">"I turn raw data into compelling stories that drive decisions."</p>
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="flex-1 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+                            <div class="text-cyan-400 font-medium">— Yongyu Lin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-28 bg-slate-950">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="section-header text-5xl font-semibold heading-font mb-16">Skills</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Technical -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <i class="fa-solid fa-code text-3xl text-cyan-400"></i>
+                        <h3 class="text-2xl font-semibold">Technical Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Python</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">SQL</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Excel (Advanced)</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Tableau</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">SPSS</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Machine Learning</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Prompt Engineering</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Generative AI</span>
+                    </div>
+                </div>
+                
+                <!-- Business -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <i class="fa-solid fa-briefcase text-3xl text-cyan-400"></i>
+                        <h3 class="text-2xl font-semibold">Business Skills</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-cyan-400 mt-1"></i> Problem framing &amp; market research</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-cyan-400 mt-1"></i> KPI tracking &amp; A/B testing mindset</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-cyan-400 mt-1"></i> Data storytelling &amp; reporting</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-cyan-400 mt-1"></i> User profiling &amp; sales funnel optimization</li>
+                    </ul>
+                </div>
+                
+                <!-- Tools -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <i class="fa-solid fa-toolbox text-3xl text-cyan-400"></i>
+                        <h3 class="text-2xl font-semibold">Tools &amp; Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">pandas</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">scikit-learn</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Tableau Dashboards</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Grok • Vidu • Suno • ElevenLabs</span>
+                        <span class="px-5 py-3 bg-slate-900 border border-slate-700 rounded-3xl text-sm">Excel Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-28 bg-slate-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="section-header text-5xl font-semibold heading-font mb-6">Featured Projects</h2>
+            <p class="text-slate-400 mb-16">End-to-end data &amp; AI solutions that deliver real business impact</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card glass border border-slate-700 rounded-3xl p-8">
+                    <div class="text-cyan-400 text-sm font-mono mb-3">Nov 2025 – Jan 2026</div>
+                    <h4 class="text-2xl font-semibold mb-6 leading-tight">SocialWingman: Generative AI-Driven Multimedia Content Creation</h4>
+                    <div class="space-y-5 text-sm text-slate-300">
+                        <div><strong class="text-cyan-400">Problem:</strong> Needed high-impact promotional assets for a generative AI startup pitch to showcase emotional transformation.</div>
+                        <div><strong class="text-cyan-400">Approach:</strong> Leveraged Grok AI, Vidu AI, Suno, and ElevenLabs to create posters, 42s brand video, and audio campaigns.</div>
+                        <div><strong class="text-cyan-400">Impact:</strong> Delivered cohesive multisensory campaign integrated into 20-minute pitch, dramatically strengthening brand storytelling.</div>
+                        <div class="pt-3 border-t border-slate-700 text-xs"><strong>My Role:</strong> Led entire AI multimedia production</div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass border border-slate-700 rounded-3xl p-8">
+                    <div class="text-cyan-400 text-sm font-mono mb-3">Oct 2025 – Dec 2025</div>
+                    <h4 class="text-2xl font-semibold mb-6 leading-tight">Data-Driven Sales Strategy Analysis</h4>
+                    <div class="space-y-5 text-sm text-slate-300">
+                        <div><strong class="text-cyan-400">Problem:</strong> Identify underperforming product categories across regions affecting overall profitability (10,000+ records).</div>
+                        <div><strong class="text-cyan-400">Data &amp; Approach:</strong> SQL queries, Excel/Tableau cleaning &amp; visualization, profit/risk scenario modeling.</div>
+                        <div><strong class="text-cyan-400">Impact:</strong> Uncovered 15–25% sales declines; recommended production cuts that directly support cost control and optimization.</div>
+                        <div class="pt-3 border-t border-slate-700 text-xs"><strong>My Role:</strong> End-to-end analysis &amp; insight delivery (Individual)</div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card glass border border-slate-700 rounded-3xl p-8">
+                    <div class="text-cyan-400 text-sm font-mono mb-3">Mar 2023 – May 2024</div>
+                    <h4 class="text-2xl font-semibold mb-6 leading-tight">Self-Media IP Incubation E-commerce Project</h4>
+                    <div class="space-y-5 text-sm text-slate-300">
+                        <div><strong class="text-cyan-400">Problem:</strong> Build and scale a cultural creative IP while driving sales and social impact.</div>
+                        <div><strong class="text-cyan-400">Approach:</strong> Created 200+ Little Red Book posts, analyzed 300+ user surveys, optimized product strategy.</div>
+                        <div><strong class="text-cyan-400">Impact:</strong> Multiple viral notes (3K+ views), 2 sponsorships secured, 90% profits reinvested into stray cat rescue.</div>
+                        <div class="pt-3 border-t border-slate-700 text-xs"><strong>My Role:</strong> Content strategy, data analysis &amp; product optimization</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="py-28 bg-slate-950">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+            <h2 class="section-header text-5xl font-semibold heading-font mx-auto mb-8">Resume</h2>
+            <p class="max-w-md mx-auto text-slate-400 mb-10">Download my full CV to see detailed experience, coursework, and achievements.</p>
+            
+            <a href="https://drive.google.com/file/d/YOUR_PDF_LINK_HERE/view" 
+               target="_blank"
+               class="inline-flex items-center gap-4 px-12 py-6 text-xl font-semibold bg-white text-slate-950 rounded-3xl hover:bg-cyan-400 hover:text-slate-950 group">
+                <i class="fa-solid fa-file-pdf text-3xl"></i>
+                Download Full Resume (PDF)
+                <span class="text-cyan-400 group-hover:text-slate-950">↓</span>
+            </a>
+            <p class="text-xs text-slate-500 mt-6">* Replace the link above with your actual Google Drive shareable PDF link</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-5xl font-semibold heading-font mb-8">Let's Connect</h2>
+                    <p class="text-slate-400 text-2xl">I'm currently seeking full-time or internship opportunities in AI, Data Analytics, and Business Intelligence roles.</p>
+                    
+                    <div class="mt-16 space-y-8">
+                        <a href="mailto:yongyulin123@gmail.com" class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center text-3xl group-hover:bg-cyan-400 group-hover:text-slate-950">✉️</div>
+                            <div>
+                                <div class="text-sm text-cyan-400">EMAIL</div>
+                                <div class="text-2xl">yongyulin123@gmail.com</div>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+85244737328" class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center text-3xl group-hover:bg-cyan-400 group-hover:text-slate-950">📱</div>
+                            <div>
+                                <div class="text-sm text-cyan-400">PHONE</div>
+                                <div class="text-2xl">+852 4473 7328</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 flex flex-col justify-center">
+                    <p class="text-slate-400 mb-8">Or find me on:</p>
+                    <div class="flex gap-8 text-4xl">
+                        <a href="https://linkedin.com" target="_blank" class="hover:text-cyan-400"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank" class="hover:text-cyan-400"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <p class="mt-auto pt-12 text-sm text-slate-500">
+                        Singapore / Hong Kong • Available for immediate start
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            © 2026 Yongyu Lin • Built as final individual project for MSc AI &amp; Business Analytics
+            <div class="mt-4 text-xs">Hosted on GitHub Pages • Pure HTML + Tailwind</div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script initialization
+        function initializeTailwind() {
+            tailwind.config = {
+                content: [],
+                theme: {
+                    extend: {}
+                }
+            }
+        }
+        initializeTailwind();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        console.log('%c✅ Yongyu Lin Portfolio ready! Beautiful artistic version loaded.', 'color:#00f5d4; font-family:Space Grotesk; font-size:14px');
+    </script>
+</body>
+</html>
